@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
     palette: {
       mode: isDarkMode ? 'dark' : 'light',
       primary: {
-        main: isDarkMode ? '#f5f5f5' : '#000000', // Set white color for light mode
+        main: isDarkMode ? '#f5f5f5' : '#121212', // Set white color for light mode
       },
     },
   });

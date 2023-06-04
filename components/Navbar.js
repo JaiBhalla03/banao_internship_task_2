@@ -11,7 +11,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
     return (
         <nav position="static" className={`${isDarkMode?'bg-dark shadow-black' : 'bg-white'} p-4 shadow-xl rounded-xl md:h-[12%] flex items-center w-full`}>
             <div className={'flex justify-between w-full'}>
-                <div className={'flex items-center text-2xl font-bold'}>
+                <div className={'flex items-center font-bold text-lg md:text-2xl'}>
                     INTERNSHIP TASK-2
                 </div>
                 <div className={'flex gap-3'}>
