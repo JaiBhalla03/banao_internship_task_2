@@ -1,0 +1,48 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes bounce1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes bounce2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+}
+
+@keyframes bounce3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-24px); }
+}
+
+@keyframes bounce4 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-32px); }
+}
+
+.animate-bounce1 {
+    animation: bounce1 1s ease-in-out infinite;
+}
+
+.animate-bounce2 {
+    animation: bounce2 1s ease-in-out infinite;
+}
+
+.animate-bounce3 {
+    animation: bounce3 1s ease-in-out infinite;
+}
+
+.animate-bounce4 {
+    animation: bounce4 1s ease-in-out infinite;
+}
