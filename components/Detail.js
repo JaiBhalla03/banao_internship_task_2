@@ -3,12 +3,30 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import PreloaderSmall from './PreloaderSmall';
 import Image from "next/image";
+import userImage from "../images/user.jpg";
+
+
+const ImageWithFallback = (props) => {
+    const { src, fallbackSrc, ...rest } = props;
+    const [imgSrc, setImgSrc] = useState(src);
+
+    return (
+        <Image
+            {...rest}
+            src={imgSrc}
+            onError={() => {
+                setImgSrc(fallbackSrc);
+            }}
+        />
+    );
+};
+
+
 
 const Detail = ({ isDarkMode , selectedUser}) => {
     const [data, setData] = useState(null); // stores the data of the user
     const [loading, setLoading] = useState(true); // taking care while the data is getting loaded
     const [error, setError] = useState(null); // taking care of the error message
-
 
     const fetchData = async () => {
         try {
@@ -20,6 +38,10 @@ const Detail = ({ isDarkMode , selectedUser}) => {
             setLoading(false);
         }
     };
+
+    const handleImageError = (event) => {
+        event.target.src = userImage; // Replace the failed image with the fallback userImage
+    }
 
     useEffect(() => {
         fetchData().then(() => {
@@ -40,8 +62,13 @@ const Detail = ({ isDarkMode , selectedUser}) => {
                 ) : (
                     <div className={'flex flex-col gap-4 py-2 h-full px-2 md:px-8'}>
                         <div className={'flex flex-col gap-2 items-center justify-center'}>
-                            <div className={'flex flex-col'}>
-                                <Image src={selectedUser.avatar} alt={''} width={140} height={140} className={'rounded-full'}/>
+                            <div className={'flex flex-col items-center justify-center'}>
+                                <Image
+                                    src={selectedUser.avatar || userImage}
+                                    alt={''} width={140} height={140}
+                                    className={'rounded-full'}
+                                    onError={()=>handleImageError}
+                                />
                                 <div className={'flex justify-center text-gray-400 font-bold'}>@{selectedUser.profile.username}</div>
                             </div>
                             <div className={`flex gap-1 ${isDarkMode?'shadow-black':''} shadow-md px-4 py-2 rounded-xl w-full`}>
