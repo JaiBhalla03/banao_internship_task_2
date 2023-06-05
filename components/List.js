@@ -31,7 +31,7 @@ const List = ({ isDarkMode , setSelectedUser}) => {
 
     return (
         <div className={`${isDarkMode ? 'bg-dark shadow-black' : 'bg-white'} p-4 shadow-xl rounded-xl w-full md:w-5/12 h-full`}>
-            <div className="border-b border-gray-400 py-3 font-bold text-md text-gray-400 flex items-center p-2 h-[15%]">
+            <div className="border-b border-gray-400 py-3 font-bold text-md text-gray-400 flex items-center p-2 h-[10%]">
                 User List
             </div>
             {loading ? (
