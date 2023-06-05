@@ -37,7 +37,7 @@ const List = ({ isDarkMode , setSelectedUser}) => {
             {loading ? (
                 <PreloaderSmall />
             ) : (
-                <div className={`my-2 overflow-y-scroll ${isDarkMode ? 'custom-scrollbar-dark' : 'custom-scrollbar'} p-2 h-[85%]`}>
+                <div className={`my-2 overflow-y-scroll ${isDarkMode ? 'custom-scrollbar-dark' : 'custom-scrollbar'} p-2 md:h-[85%] h-screen`}>
                     {data?.map((person) => (
                         <ListCard
                             key={person.id}

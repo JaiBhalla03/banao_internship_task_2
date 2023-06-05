@@ -6,11 +6,6 @@ import userImage from '../images/user.jpg'
 
 const ListCard = ({isDarkMode, firstName, lastName, username, imag, onSelectUser}) => {
 
-    const handleClick = () => {
-        console.log('1')
-    };
-
-
     const handleImageError = (event) => {
         event.target.src = userImage; // Replace the failed image with the fallback userImage
     }

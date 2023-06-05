@@ -38,7 +38,7 @@ const Detail = ({ isDarkMode , selectedUser}) => {
                 loading ? (
                     <PreloaderSmall/>
                 ) : (
-                    <div className={'flex flex-col gap-4 py-2 h-full px-8'}>
+                    <div className={'flex flex-col gap-4 py-2 h-full px-2 md:px-8'}>
                         <div className={'flex flex-col gap-2 items-center justify-center'}>
                             <div className={'flex flex-col'}>
                                 <Image src={selectedUser.avatar} alt={''} width={140} height={140} className={'rounded-full'}/>
