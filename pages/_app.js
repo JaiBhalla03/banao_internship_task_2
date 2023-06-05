@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import Navbar from "../components/Navbar";
 import {CssBaseline} from "@mui/material";
 
+
 export default function App({ Component, pageProps }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +18,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   if (isLoading) {
-    return <Preloader />;
+    return <Preloader/>;
   }
 
   const toggleTheme = () => {
@@ -34,9 +35,9 @@ export default function App({ Component, pageProps }) {
   });
 
   return (
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps}  isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps}  isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
+        </ThemeProvider>
   );
 }

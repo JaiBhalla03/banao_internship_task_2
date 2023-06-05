@@ -13,22 +13,30 @@
 
 @keyframes bounce1 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    25% { transform: translateY(-8px); }
+    50% {transform: translateY(-16px);}
+    75% {transform: translateY(-8px);}
 }
 
 @keyframes bounce2 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-16px); }
+    25% {transform: translateY(-12px);}
+    50% { transform: translateY(-24px); }
+    75% { transform: translateY(-12px); }
 }
 
 @keyframes bounce3 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-24px); }
+    25% { transform: translateY(-8px); }
+    50% {transform: translateY(-16px);}
+    75% {transform: translateY(-8px);}
 }
 
 @keyframes bounce4 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-32px); }
+    25% {transform: translateY(-12px);}
+    50% { transform: translateY(-24px); }
+    75% { transform: translateY(-12px); }
 }
 
 .animate-bounce1 {
@@ -36,7 +44,7 @@
 }
 
 .animate-bounce2 {
-    animation: bounce2 1s ease-in-out infinite;
+    animation: bounce2 2s ease-in-out infinite;
 }
 
 .animate-bounce3 {
@@ -44,12 +52,12 @@
 }
 
 .animate-bounce4 {
-    animation: bounce4 1s ease-in-out infinite;
+    animation: bounce4 2s ease-in-out infinite;
 }
 
 /* The main scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
+    width: 3px; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -58,7 +66,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: rgb(60, 60, 65); /* Set the color of the scrollbar thumb */
-    border-radius: 10px; /* Set the border radius of the thumb */
+    border-radius: 1px; /* Set the border radius of the thumb */
 }
 
 /* CSS */
